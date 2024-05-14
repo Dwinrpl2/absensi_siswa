@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Kegiatan Guru</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #F4F4F4;;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+
+            background-color: #EAEAEA;
+
+        }
+
+
+        form>* {
+            margin-bottom: 15px;
+        }
+
+
+        label,
+        input,
+        select,
+        textarea {
+            color: #333;
+
+        }
+
+        h2 {
+            text-align: center;
+            color: #222831;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+            color: #222831;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4834d4;
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+
+        .btn-15,
+        .btn-15 *,
+        .btn-15 :after,
+        .btn-15 :before,
+        .btn-15:after,
+        .btn-15:before {
+            border: 0 solid;
+            box-sizing: border-box;
+        }
+
+        .btn-15 {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 100%;
+            font-weight: 900;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0.2rem 4rem;
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 50rem;
+            border-width: 1px;
+            overflow: hidden;
+            position: relative;
+            z-index: 0;
+        }
+
+        .btn-15 span {
+            mix-blend-mode: difference;
+        }
+
+        .btn-15:after,
+        .btn-15:before {
+            --skew: 0;
+            background: #fff;
+            content: "";
+            display: block;
+            height: 102%;
+            left: calc(-50% - 50% * var(--skew));
+            pointer-events: none;
+            position: absolute;
+            top: -104%;
+            transform: skew(calc(75deg * var(--skew))) translateY(var(--progress, 0));
+            transition: transform 0.2s ease;
+            width: 100%;
+        }
+
+        .btn-15:after {
+            --progress: 0%;
+            left: calc(50% + 50% * var(--skew));
+            top: 102%;
+            z-index: -1;
+        }
+
+        .btn-15:hover:before {
+            --progress: 100%;
+        }
+
+        .btn-15:hover:after {
+            --progress: -102%;
+        }
+
+        .btn-container {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <div class="container">
+            <h2>Formulir Kegiatan Guru</h2>
+            <form action="" method="POST" enctype="multipart/form-data">
+
+                <label for="namaguru">Nama Guru:</label>
+                <input type="text" id="namaguru" name="namaguru" required><br>
+
+                <label for="jabatan">Jabatan:</label>
+                <select id="jabatan" name="jabatan" required>
+                    <option value="Guru">Guru</option>
+                    <option value="Walas">Wali Kelas</option>
+                    <option value=" Ketuju">Ketua Jurusan</option>
+                    <option value="Wakasek">Wakil Kepala Sekolah</option>
+                </select><br>
+
+                <label for="jurusan">Mengajar Jurusan:</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="MESIN">MESIN</option>
+                    <option value="LISTRIK">LISTRIK</option>
+                    <option value="SIPIL">SIPIL</option>
+                    <option value="RPL">RPL</option>
+                </select><br>
+
+
+                <label for="kelas">Kelas:</label>
+                <input type="text" id="kelas" name="kelas"><br>
+
+                <label for="tingkat">Tingkat:</label><br>
+                <select id="tingkat" name="tingkat" required>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select><br>
+
+                <label for="namakegiatan">Nama Kegiatan:</label>
+                <input type="text" id="namakegiatan" name="namakegiatan" required><br>
+
+                <label for="jeniskegiatan">Jenis Kegiatan:</label>
+                <select id="jeniskegiatan" name="jeniskegiatan" required>
+                    <option value="KBM">KBM</option>
+                    <option value="Non KBM">Non KBM</option>
+                </select><br>
+
+                <label for="tanggalkegiatan">Tanggal Kegiatan:</label>
+                <input type="date" id="tanggalkegiatan" name="tanggalkegiatan" required><br><br>
+
+                <label for="ruangkegiatan">Ruang Kegiatan:</label>
+                <input type="text" id="ruangkegiatan" name="ruangkegiatan"><br>
+
+                <label for="uraiankegiatan">Uraian Kegiatan:</label>
+                <textarea id="uraiankegiatan" name="uraiankegiatan" required></textarea><br>
+
+                <label for="targetkegiatan">Target Kegiatan:</label>
+                <input type="text" id="targetkegiatan" name="targetkegiatan"><br>
+
+                <br><label for="buktikegiatan">Bukti Kegiatan:</label>
+                <br><input type="file" name="buktikegiatan" id="buktikegiatan" accept="image/*" required><br>
+                <input type="hidden" id="papbukti" name="papbukti">
+                <script>
+                    document.getElementById('buktikegiatan').addEventListener('change', function (event) {
+                        var file = event.target.files[0];
+                        var reader = new FileReader();
+                        reader.onloadend = function () {
+                            document.getElementById('papbukti').value = reader.result.split(',')[1];
+                        }
+                        reader.readAsDataURL(file);
+                    });
+                </script>
+
+                <div class="btn-container">
+                    <br><button class="btn-15"><span>Button</span></button></br>
+                </div>
+            </form>
+        </div>
+    </table>
+
+</body>
+
+</html>
